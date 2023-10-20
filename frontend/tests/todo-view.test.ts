@@ -1,9 +1,18 @@
-import { afterEach, beforeEach, describe, expect, it, type SpyInstance, vi } from "vitest";
-import { fixture } from "@open-wc/testing-helpers";
+import {
+  afterEach,
+  beforeEach,
+  describe,
+  expect,
+  it,
+  type SpyInstance,
+  vi,
+} from "vitest";
+import { fixture, html } from "@open-wc/testing-helpers";
 import { screen } from "@testing-library/dom";
 import { userEvent } from "@testing-library/user-event";
 import { TodoService } from "Frontend/generated/endpoints";
 import "Frontend/views/todo-view";
+
 describe("TodoView", () => {
   let addTodoSpy: SpyInstance;
 
@@ -17,14 +26,14 @@ describe("TodoView", () => {
   });
 
   it("should render", async () => {
-    await fixture("<todo-view></todo-view>");
+    await fixture(html`<todo-view></todo-view>`);
 
     const title = screen.getByText("My Todos");
     expect(title).to.exist;
   });
 
   it("should add a todo", async () => {
-    await fixture("<todo-view></todo-view>");
+    await fixture(html`<todo-view></todo-view>`);
 
     const textField = screen.getByLabelText("New todo");
     const button = screen.getByRole("button", { name: "Add todo" });
@@ -35,7 +44,7 @@ describe("TodoView", () => {
   });
 
   it("should call service when adding todo", async () => {
-    await fixture("<todo-view></todo-view>");
+    await fixture(html`<todo-view></todo-view>`);
 
     const textField = screen.getByLabelText("New todo");
     const button = screen.getByRole("button", { name: "Add todo" });
