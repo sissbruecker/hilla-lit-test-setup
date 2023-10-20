@@ -1,6 +1,9 @@
 {
   "name": "no-name",
   "license": "UNLICENSED",
+  "scripts": {
+    "test": "vitest"
+  },
   "dependencies": {
     "@adobe/lit-mobx": "2.0.0",
     "@hilla/form": "2.2.2",
@@ -88,12 +91,18 @@
     "mobx": "^6.3.5"
   },
   "devDependencies": {
+    "@open-wc/testing-helpers": "^2.3.0",
     "@rollup/plugin-replace": "5.0.2",
     "@rollup/pluginutils": "5.0.2",
+    "@testing-library/dom": "^9.3.3",
+    "@testing-library/user-event": "^14.5.1",
     "@vitejs/plugin-react": "4.0.0",
+    "@vitest/browser": "^0.34.6",
     "async": "3.2.2",
     "glob": "7.2.3",
     "mkdirp": "1.0.4",
+    "prettier": "^3.0.3",
+    "pretty-format": "^29.7.0",
     "rollup-plugin-brotli": "3.1.0",
     "rollup-plugin-visualizer": "5.9.0",
     "strip-css-comments": "5.0.0",
@@ -101,6 +110,8 @@
     "typescript": "5.0.4",
     "vite": "4.3.9",
     "vite-plugin-checker": "0.5.5",
+    "vitest": "^0.34.6",
+    "webdriverio": "^8.19.0",
     "workbox-build": "7.0.0",
     "workbox-core": "7.0.0",
     "workbox-precaching": "7.0.0"
@@ -294,6 +305,6 @@
       "workbox-core": "7.0.0",
       "workbox-precaching": "7.0.0"
     },
-    "hash": "ab01b8d485e0829cb07c20d28e8f4fa8b2fe566255ca53c96946482507961740"
+    "hash": "7801c3dc77683833b902c2dc5d17afe8aa70d169a2b76813906d872b25012104"
   }
 }
